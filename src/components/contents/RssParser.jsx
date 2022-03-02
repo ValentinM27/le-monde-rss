@@ -9,23 +9,27 @@ export default class RssParser extends React.Component{
   constructor(props) {
     super(props);
     this.state = { 
-      feed: []
+      feed: [],
      };
   }
 
   async componentDidMount() {
   
-    fetch(`https://api.allorigins.win/get?url=${encodeURIComponent('https://www.lemonde.fr/rss/une.xml')}`)
+    fetch(`https://api.allorigins.win/get?url=${encodeURIComponent(this.props.link)}`)
       .then(response => response.json())
       .then(data => {
 
-        var feed = new DOMParser().parseFromString(data.contents, "text/xml"); 
+        const feed = new DOMParser().parseFromString(data.contents, "text/xml");
 
-        const items = Array.from(feed.querySelectorAll("item")).map(item => ({
-          title: item.querySelector("title").textContent,
-          description: item.querySelector("description").childNodes[0].data,
-          link: item.querySelector("link").childNodes[0].data
-        }));
+        const items = Array.from(feed.querySelectorAll("item"))
+          .map(item => ({
+            title: item.querySelector("title").textContent,
+            description: item.querySelector("description").childNodes[0].data,
+            link: item.querySelector("link").childNodes[0].data,
+            urlImage: item.querySelector("*|content").getAttribute("url"),
+          }));
+
+        console.log(items)
 
         this.setState({ news: items });
 
@@ -34,9 +38,7 @@ export default class RssParser extends React.Component{
 
   render() {
     return (
-    <div>      
-      
-      <h1>Blog Posts</h1>
+    <div className="col-md-12">      
       {this.state.news && this.state.news.map((item) => {
         return (
           <div>

@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import './Article.scss';
 
 /**
  * Permet d'afficher le contenu d'un article 
@@ -6,11 +7,18 @@ import React from 'react'
  * @returns 
  */
 const Article = (props) => {
+
   return (
-    <div key={props.item.title}>
-        <h2>{props.item.title}</h2>
-        <p>{props.item.description}</p>
-        <h1>{props.item.link}</h1>
+    <div className="article-container" key={props.item.title}>
+      
+      <h2>{props.item.title}</h2>
+      <img src={props.item.urlImage} alt="Illustration" />
+      <p>{props.item.description}</p>
+      
+      <div className="text-center button">
+        <a href={props.item.link} target="_blank" rel="noreferrer">Consulter</a>
+      </div>
+      
     </div>
   )
 }
