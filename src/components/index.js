@@ -1,0 +1,1 @@
+export { default as Parser } from './contents/RssParser.jsx';
