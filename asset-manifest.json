@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/le-monde-rss/static/css/main.631684f7.css",
+    "main.js": "/le-monde-rss/static/js/main.1cf3c0c1.js",
+    "static/js/787.71e672d5.chunk.js": "/le-monde-rss/static/js/787.71e672d5.chunk.js",
+    "index.html": "/le-monde-rss/index.html",
+    "main.631684f7.css.map": "/le-monde-rss/static/css/main.631684f7.css.map",
+    "main.1cf3c0c1.js.map": "/le-monde-rss/static/js/main.1cf3c0c1.js.map",
+    "787.71e672d5.chunk.js.map": "/le-monde-rss/static/js/787.71e672d5.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.631684f7.css",
+    "static/js/main.1cf3c0c1.js"
+  ]
+}
