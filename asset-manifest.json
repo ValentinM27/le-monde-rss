@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.631684f7.css",
-    "main.js": "/static/js/main.f4c7c95e.js",
-    "static/js/787.71e672d5.chunk.js": "/static/js/787.71e672d5.chunk.js",
-    "index.html": "/index.html",
-    "main.631684f7.css.map": "/static/css/main.631684f7.css.map",
-    "main.f4c7c95e.js.map": "/static/js/main.f4c7c95e.js.map",
-    "787.71e672d5.chunk.js.map": "/static/js/787.71e672d5.chunk.js.map"
+    "main.css": "/le-monde-rss/static/css/main.631684f7.css",
+    "main.js": "/le-monde-rss/static/js/main.7c667f29.js",
+    "static/js/787.71e672d5.chunk.js": "/le-monde-rss/static/js/787.71e672d5.chunk.js",
+    "index.html": "/le-monde-rss/index.html",
+    "main.631684f7.css.map": "/le-monde-rss/static/css/main.631684f7.css.map",
+    "main.7c667f29.js.map": "/le-monde-rss/static/js/main.7c667f29.js.map",
+    "787.71e672d5.chunk.js.map": "/le-monde-rss/static/js/787.71e672d5.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.631684f7.css",
-    "static/js/main.f4c7c95e.js"
+    "static/js/main.7c667f29.js"
   ]
 }
