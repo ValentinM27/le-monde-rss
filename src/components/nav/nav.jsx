@@ -10,7 +10,7 @@ const Navigation = () => {
 
     return (
     <div>
-        <Navbar className="navbar navbar-light bg-light" bg="light" sticky="top" expand="xl">
+        <Navbar className="navbar fixed-top navbar-light" bg="light" expand="xl">
             <Container>
                 <Navbar.Brand href="/">
                     <img
@@ -18,7 +18,7 @@ const Navigation = () => {
                         src={logo_nav}
                         width="30"
                         height="30"
-                        className="d-inline-block align-top"
+                        className="d-inline-block align-top logo"
                     />{' '}
                     Le Monde
                     

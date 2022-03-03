@@ -41,14 +41,17 @@ export default class RssParser extends React.Component{
 
   render() {
     return (
-    <div className="col-md-12">      
-      {this.state.news && this.state.news.map((item) => {
-        return (
-          <div>
-            <Article item={item}/>
-          </div>
-        )
-      })}
+    <div className="col-md-12 stick">      
+      <div className="margin-top">
+        {this.state.news && this.state.news.map((item) => {
+          return (
+            <div>
+              <Article item={item}/>
+            </div>
+          )
+        })}
+      </div>
+      
     </div>
     );
   }
