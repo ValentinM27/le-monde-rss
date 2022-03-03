@@ -10,6 +10,7 @@ export default class RssParser extends React.Component{
     super(props);
     this.state = { 
       feed: [],
+      loading: true
      };
   }
 
@@ -32,25 +33,31 @@ export default class RssParser extends React.Component{
             mediaCredit: item.querySelector("*|content").querySelector("*|credit")
           }));
 
-        this.setState({ news: items });
-
+        this.setState({ news: items, loading: false });
       })
   }
 
   render() {
-    return (
-    <div className="col-md-12 stick">      
-      <div className="margin-top">
-        {this.state.news && this.state.news.map((item) => {
-          return (
-            <div key={item.link}>
-              <Article item={item}/>
-            </div>
-          )
-        })}
-      </div>
-      
-    </div>
-    );
+    if(this.state.loading) {
+      return(
+        <div className="col-md-12 text-center">   
+            <div className="spinner-border text-warning" role="status"/>
+        </div>   
+      )
+    } else {
+      return (
+        <div className="col-md-12 stick">      
+          <div className="margin-top">
+            {this.state.news && this.state.news.map((item) => {
+              return (
+                <div key={item.link}>
+                  <Article item={item}/>
+                </div>
+              )
+            })}
+          </div>  
+        </div>
+      )
+    }
   }
 }
