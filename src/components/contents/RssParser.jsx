@@ -29,10 +29,8 @@ export default class RssParser extends React.Component{
             pubDate: Date.parse(item.querySelector("pubDate").childNodes[0].data),
             urlImage: item.querySelector("*|content").getAttribute("url"),
             altImage: item.querySelector("*|content").querySelector("*|description"),
-            mediaCredit: item.querySelector("*|content").querySelector("*|credit").textContent
+            mediaCredit: item.querySelector("*|content").querySelector("*|credit")
           }));
-
-        console.log(items)
 
         this.setState({ news: items });
 
@@ -45,7 +43,7 @@ export default class RssParser extends React.Component{
       <div className="margin-top">
         {this.state.news && this.state.news.map((item) => {
           return (
-            <div>
+            <div key={item.link}>
               <Article item={item}/>
             </div>
           )

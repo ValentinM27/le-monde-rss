@@ -21,12 +21,11 @@ img {
 
     border-bottom: 1px solid #fff;
 
-    width: 50%;
+    width: 65%;
     padding: 20px 20px;
-    border-radius: 5px;
 
     @media (max-width: 768px) {
-        width: 80%;
+        width: 90%;
     }
 
     .button {
@@ -66,5 +65,13 @@ img {
     a {
         text-decoration: none;
         color: #fff;
+    }
+}
+
+.footer {
+    width: 65%;
+
+    @media (max-width: 768px) {
+        width: 95%;
     }
 }
