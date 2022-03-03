@@ -26,7 +26,7 @@ const Article = (props) => {
       (
         <div>
           <img src={props.item.urlImage} alt="Image d'illustration"/>
-          <p>{props.item.mediaCredit}</p>
+          <p className="article-img-description">{props.item.mediaCredit}</p>
         </div>
       )}
 

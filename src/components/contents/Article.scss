@@ -10,6 +10,10 @@ body {
     border-radius: 5px;
 }
 
+img {
+    border-radius: 10px;
+}
+
 .article-container {
     margin-left: auto;
     margin-right: auto;
@@ -56,4 +60,11 @@ body {
         font-size: .8em;
         color: #979797;
     } 
+}
+
+.copy {
+    a {
+        text-decoration: none;
+        color: #fff;
+    }
 }

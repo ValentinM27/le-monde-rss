@@ -1,6 +1,6 @@
 import React from 'react';
 import {BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import {Parser, Navigation, NotFound} from './components/index.js';
+import {Parser, Navigation, NotFound, Footer} from './components/index.js';
 import "bootstrap/dist/css/bootstrap.min.css";
 
 export default class App extends React.Component{
@@ -19,6 +19,7 @@ export default class App extends React.Component{
           <Route exact path="/sciences" element={<Parser link={'https://www.lemonde.fr/sciences/rss_full.xml'}/>}/>
           <Route path='*' element={<NotFound />} />
         </Routes>
+        <Footer />
       </Router>
     </div>
     );
