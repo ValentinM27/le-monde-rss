@@ -26,7 +26,10 @@ export default class RssParser extends React.Component{
             title: item.querySelector("title").textContent,
             description: item.querySelector("description").childNodes[0].data,
             link: item.querySelector("link").childNodes[0].data,
+            pubDate: Date.parse(item.querySelector("pubDate").childNodes[0].data),
             urlImage: item.querySelector("*|content").getAttribute("url"),
+            altImage: item.querySelector("*|content").querySelector("*|description"),
+            mediaCredit: item.querySelector("*|content").querySelector("*|credit").textContent
           }));
 
         console.log(items)
