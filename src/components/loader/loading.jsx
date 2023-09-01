@@ -1,12 +1,10 @@
-import React from 'react'
+import React from "react";
 
 /**
  * Chargement de l'écran
  */
 const loading = () => {
-  return (
-    <div>loading</div>
-  )
-}
+  return <div>loading</div>;
+};
 
-export default loading
+export default loading;
